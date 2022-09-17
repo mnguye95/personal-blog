@@ -1,60 +1,151 @@
 ---
+import config from "../../config.json";
+import { BsLinkedin, BsGithub } from "react-icons/bs";
+import "@fontsource/space-grotesk";
+import "@fontsource/montserrat"
+
+
 export interface Props {
-	title: string;
+  title?: string;
+  index?: boolean;
+  url?: string;
+  desc?: string;
+  name?: string;
+  image?: string;
+  twitter?: string;
+  alt?: string;
 }
 
-const { title } = Astro.props;
+const {
+  url = config.url,
+  index = config.index,
+  title = config.title,
+  desc = config.desc,
+  image = config.image,
+  name = config.name,
+  twitter = config.twitter.handle,
+  alt = config.name,
+} = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html class="bg-space-cadet" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- <link rel="icon" href="/images/favicon.png" /> -->
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+
+    <meta name="description" content={desc} />
+    <link rel="canonical" href={url} />
+
+    <meta name="robots" content={index ? "index, follow" : "noindex"} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={url} />
+    <meta property="og:site_name" content={name} />
+
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={desc} />
+    <meta name="twitter:image" content={image} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image:alt" content={alt} />
+    <meta name="twitter:site" content={`@${twitter}`} />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+  </head>
+  <body>
+    <div class="flex flex-col min-h-screen mx-auto max-w-[1240px] md:p-10 p-5">
+      <div class="mx-auto text-center w-full md:mb-10 mb-0">
+        <h4
+          class="font-space-grotesk text-honey-yellow md:text-4xl text-2xl font-medium"
+        >
+          Michael Nguyen
+        </h4>
+        <div
+          class="flex justify-between items-center w-full flex-col-reverse md:flex-row"
+        >
+          <ul class="flex">
+            <li class="p-2">
+              <a class="font-space-grotesk text-honey-yellow" href="/">Home</a>
+            </li>
+            <li class="p-2">
+              <a class="font-space-grotesk text-honey-yellow" href="/portfolio"
+                >Portfolio</a
+              >
+            </li>
+            <li class="p-2">
+              <a class="font-space-grotesk text-honey-yellow" href="/blog"
+                >Blog</a
+              >
+            </li>
+            <li class="p-2">
+              <a
+                class="font-space-grotesk text-honey-yellow disabled"
+                href="/contact">Contact</a
+              >
+            </li>
+          </ul>
+          <ul class="flex">
+            <li class="p-2">
+              <a href={config.linkedin}
+                ><BsLinkedin color={"#fdb833"} size={25} />
+              </a>
+            </li>
+            <li class="p-2">
+              <a href={config.github}
+                ><BsGithub color={"#fdb833"} size={25} />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    <slot />
+    </div>
+    <style>
+      :root {
+        --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+        --font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
+        --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+
+        --color-text: hsl(12, 5%, 4%);
+        --color-bg: hsl(10, 21%, 95%);
+        --color-border: hsl(17, 24%, 90%);
+      }
+
+      html {
+        font-family: system-ui, sans-serif;
+        font-size: var(--font-size-base);
+        color: var(--color-text);
+        background-color: var(--color-bg);
+      }
+
+      body {
+        margin: 0;
+      }
+    </style>
+
+    <style is:global>
+      h1 {
+        font-size: var(--font-size-xl);
+      }
+
+      h2 {
+        font-size: var(--font-size-lg);
+      }
+
+      code {
+        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+      }
+    </style>
+  </body>
 </html>
-<style>
-	:root {
-		--font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
-		--font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
-		--font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
-
-		--color-text: hsl(12, 5%, 4%);
-		--color-bg: hsl(10, 21%, 95%);
-		--color-border: hsl(17, 24%, 90%);
-	}
-
-	html {
-		font-family: system-ui, sans-serif;
-		font-size: var(--font-size-base);
-		color: var(--color-text);
-		background-color: var(--color-bg);
-	}
-
-	body {
-		margin: 0;
-	}
-
-
-</style>
-
-<style is:global>
-	h1 {
-		font-size: var(--font-size-xl);
-	}
-
-	h2 {
-		font-size: var(--font-size-lg);
-	}
-
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-</style>

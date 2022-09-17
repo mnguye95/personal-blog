@@ -10,7 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^1.1.5"
+    "@fontsource/montserrat": "^4.5.12",
+    "@fontsource/space-grotesk": "^4.5.10",
+    "astro": "^1.1.5",
+    "react-icons": "^4.4.0"
   },
   "devDependencies": {
     "@astrojs/react": "^1.1.1",

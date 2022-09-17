@@ -1,0 +1,14 @@
+{
+    "url" : "https://michael-nguyen.dev",
+    "index" : true,
+    "title" : "Local SEO & Front End - Open to Work",
+    "desc" : "Michael here! If you need a website for your business or an application that solves a project, I can help!",
+    "image" : "/public/images/michael.jpg",
+    "name" : "Michael Nguyen",
+    "twitter" : {
+        "link" : "https://twitter.com/ngumic",
+        "handle" : "ngumic"
+    },
+    "linkedin" : "https://www.linkedin.com/in/michael-nguyen95/",
+    "github" : "https://github.com/mnguye95/"
+}
