@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import AstroLogo from "/astro.svg";
+import Projects from "../components/Projects.astro";
+import WorkHistory from "../components/WorkHistory.astro";
 ---
 
 <Layout>
@@ -9,11 +10,11 @@ import AstroLogo from "/astro.svg";
       <div class="w-1/2 text-center">
         <p class="md:text-4xl text-xl text-honeydew font-space-grotesk mb-2">Open to Work</p>
 		<ul class="max-w-xs mx-auto">
-			<li class="md:text-2xl text-xl p-1 font-space-grotesk text-space-cadet bg-light-cyan duration-75 hover:scale-[105%] cursor-default shadow-rb border-b border-r border-space-cadet mb-4">Web Applications</li>
-			<li class="md:text-2xl text-xl p-1 font-space-grotesk text-space-cadet bg-light-cyan duration-75 hover:scale-[105%] cursor-default shadow-rb border-b border-r border-space-cadet mb-4">Branding</li>
-			<li class="md:text-2xl text-xl p-1 font-space-grotesk text-space-cadet bg-light-cyan duration-75 hover:scale-[105%] cursor-default shadow-rb border-b border-r border-space-cadet mb-4">E-Commerce</li>
-			<li class="md:text-2xl text-xl p-1 font-space-grotesk text-space-cadet bg-light-cyan duration-75 hover:scale-[105%] cursor-default shadow-rb border-b border-r border-space-cadet mb-4">Wordpress</li>
-			<li class="md:text-2xl text-xl p-1 font-space-grotesk text-space-cadet bg-light-cyan duration-75 hover:scale-[105%] cursor-default shadow-rb border-b border-r border-space-cadet mb-4">SEO</li>
+			<li class="md:text-2xl text-xl p-1 font-space-grotesk text-space-cadet bg-light-cyan duration-75 hover:scale-[105%] cursor-pointer shadow-rb border-b border-r border-space-cadet mb-4">Web Applications</li>
+			<li class="md:text-2xl text-xl p-1 font-space-grotesk text-space-cadet bg-light-cyan duration-75 hover:scale-[105%] cursor-pointer shadow-rb border-b border-r border-space-cadet mb-4">Branding</li>
+			<li class="md:text-2xl text-xl p-1 font-space-grotesk text-space-cadet bg-light-cyan duration-75 hover:scale-[105%] cursor-pointer shadow-rb border-b border-r border-space-cadet mb-4">E-Commerce</li>
+			<li class="md:text-2xl text-xl p-1 font-space-grotesk text-space-cadet bg-light-cyan duration-75 hover:scale-[105%] cursor-pointer shadow-rb border-b border-r border-space-cadet mb-4">Wordpress</li>
+			<li class="md:text-2xl text-xl p-1 font-space-grotesk text-space-cadet bg-light-cyan duration-75 hover:scale-[105%] cursor-pointer shadow-rb border-b border-r border-space-cadet mb-4">SEO</li>
 		</ul>
         <button class="p-2 px-4 font-space-grotesk rounded-sm border-space-cadet bg-pine-green text-honeydew mb-2 duration-150 hover:scale-[108%]">Hire me!</button>
       </div>
@@ -164,38 +165,7 @@ import AstroLogo from "/astro.svg";
 			</div>
 		</div>
 	</div>
-	<div class="flex flex-col md:max-w-[900px] mx-auto my-14">
-		<h2 class="mb-5 md:text-4xl text-3xl font-space-grotesk text-honey-yellow text-center font-bold">Work History</h2>
-		<ol class="relative border-l border-honey-yellow dark:border-honey-yellow">
-			<li class="mb-10 ml-4">
-				<div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-space-cadet dark:border-honey-yellow dark:bg-honey-yellow"></div>
-				<time class="mb-1 text-sm font-normal leading-none text-space-cadet dark:text-honey-yellow">February 2019 - Present</time>
-				
-				<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Front End Developer - Clear Bounce Marketing</h3>
-				<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">A digital agency that helps local business owners develop an online presense.<br/> We started with Wordpress but transitioned to NextJS and Astro.</p>
-				<a href="https://clearbounce.com" class="inline-flex items-center p-2 px-4 font-space-grotesk rounded-sm border-space-cadet bg-pine-green text-honeydew duration-150 hover:scale-[108%]">Website</a>
-				<!-- <a href="https://clearbounce.com" class="inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-900 dark:focus:ring-honeydew">Learn more <svg class="ml-2 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></a> -->
-			</li>
-			<li class="mb-10 ml-4">
-				<div class="absolute w-3 h-3 bg-honey-yellow rounded-full mt-1.5 -left-1.5 border border-honey-yellow dark:border-honey-yellow dark:bg-honey-yellow"></div>
-				<time class="mb-1 text-sm font-normal leading-none text-space-cadet dark:text-honey-yellow">October 2021 - March 2022</time>
-				<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Quality Assurance Technician - Apple</h3>
-				<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Supported iPhone and AirPods hardware engineering teams by identifying component issues during product launches.</p>
-			</li>
-			<li class="mb-10 ml-4">
-				<div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-honey-yellow"></div>
-				<time class="mb-1 text-sm font-normal leading-none text-space-cadet dark:text-honey-yellow">December 2018 - July 2019</time>
-				<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Software Engineer - View, Inc</h3>
-				<p class="text-base font-normal text-gray-500 dark:text-gray-400">Developed Admin UIs for proprietary applications using React.</p>
-			</li>
-			<li class="ml-4">
-				<div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-honey-yellow"></div>
-				<time class="mb-1 text-sm font-normal leading-none text-space-cadet dark:text-honey-yellow">August 2016 - June 2018</time>
-				<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Student - University of California, Santa Cruz</h3>
-				<p class="text-base font-normal text-gray-500 dark:text-gray-400">BSc. Honors in Computer Science.</p>
-				<p class="text-base font-normal text-gray-500 dark:text-gray-400">Coursework: Software Engineering, Web Applications, Data Structures and Algorithms, Operating Systems, Algorithm Analysis, Data Programming Visualization, Database Systems, Mobile Applications</p>
-			</li>
-		</ol>
-	</div>
+	<WorkHistory/>
+	<Projects/>
   </main>
 </Layout>
