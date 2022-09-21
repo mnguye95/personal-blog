@@ -10,10 +10,12 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/image": "^0.7.1",
     "@fontsource/bungee": "^4.5.8",
     "@fontsource/germania-one": "^4.5.9",
     "@fontsource/montserrat": "^4.5.12",
     "@fontsource/space-grotesk": "^4.5.10",
+    "@sendgrid/mail": "^7.7.0",
     "astro": "^1.1.5"
   },
   "devDependencies": {
