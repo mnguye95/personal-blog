@@ -1,38 +1,41 @@
 import { React } from 'react'
-import mail from '@sendgrid/mail';
 import { Message } from '../store/message';
-
+// action="/api/send" method="GET"
 const ContactForm = () => {
-    mail.setApiKey(import.meta.env.PUBLIC_SENDGRID_API_KEY);
-
-    const sendEmail = (e) => {
+    var last_clicked = 0;
+    const handleSubmit  = async (e) => {
+        if (Date.now() - last_clicked < 1000000) {
+            e.preventDefault();
+            return;
+        }        
         e.preventDefault();
-        console.log(Message);
-        const msg = {
-            to: import.meta.env.PUBLIC_RECEIVER_EMAIL,
-            from: import.meta.env.PUBLIC_SENDER_EMAIL,
-            subject: 'Dev Lead',
-            text: `Email: ${Message.email}\nPhone: ${Message.phone}\n\n${Message.message}`,
-            html: `Email: ${Message.email}<br/>Phone: ${Message.phone}<br/><br/>${Message.message}`
+        console.log('button clicked');
+        const params = {
+            email: Message.value.email,
+            phone: Message.value.phone,
+            message: Message.value.message,
         }
-        mail.send(msg)
-            .then(() => {
-                console.log('Email sent')
-            })
-            .catch((error) => {
-                console.error(error)
-            })
+        await fetch('/api/send?' + new URLSearchParams(params))
+            .then((res) => {
+                console.log(res.status);
+                last_clicked = Date.now();
+                Astro.redirect('/contact');
+            });
     }
+
     return (
         <div className='flex'>
-            <form onSubmit={sendEmail} className='flex flex-col p-5 gap-y-4 mx-auto'>
-                <textarea onChange={(e) => Message.setKey('message', e.target.value)} className='w-full rounded-sm p-3 font-space-grotesk' name='message' id='message' placeholder="Enter your message" type='text' rows='8' required/>
+            {Message.sent ?
+             <div className='flex flex-col p-5 gap-y-4 mx-auto'>
+                <p className='text-center mx-auto font-bold font-space-grotesk text-light-cyan'>Message Sent!</p>
+            </div> : <form id='contactForm' onSubmit={handleSubmit} className='flex flex-col p-5 gap-y-4 mx-auto'>
+                <textarea onChange={(e) => Message.setKey('message', e.target.value)}  name="message" id='message' className='w-full rounded-sm p-3 font-space-grotesk' placeholder="Enter your message" type='text' rows='8' required/>
                 <div className='md:flex-row flex-col flex w-full gap-x-4'>
-                    <input onChange={(e) => Message.setKey('email', e.target.value)} type="email" className='p-3 font-space-grotesk rounded-sm md:mb-0 mb-4' placeholder="Email" required />
-                    <input onChange={(e) => Message.setKey('phone', e.target.value)}  type="text" className='p-3 font-space-grotesk rounded-sm' placeholder="Phone Number" required />
+                    <input onChange={(e) => Message.setKey('email', e.target.value)}  name="email" type="email" className='p-3 font-space-grotesk rounded-sm md:mb-0 mb-4' placeholder="Email" required />
+                    <input onChange={(e) => Message.setKey('phone', e.target.value)}  name="phone" type="text" className='p-3 font-space-grotesk rounded-sm' placeholder="Phone Number" required />
                 </div>
-                <button type='submit' className="mx-auto p-2 px-6 font-space-grotesk rounded-sm border-space-cadet bg-pine-green text-honeydew mb-2 duration-150 hover:scale-[108%]">Send</button>
-            </form>
+                <button type='submit' className='g-recaptcha mx-auto p-2 px-6 font-space-grotesk rounded-sm border-space-cadet  mb-2 duration-150 hover:scale-[108%] bg-pine-green text-honeydew' data-sitekey="6LdmhCAiAAAAAAPLxCPDC4xQZN2Ie3hFSk7q2Juj" data-callback='onSubmit' data-action='submit'>Send</button>
+            </form>}
         </div>
     )
 }
