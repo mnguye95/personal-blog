@@ -10,14 +10,14 @@ export default function handler(request, response) {
     text: `Email: ${email}\nPhone: ${phone}\n\n${message}`,
     html: `Email: ${email}<br/>Phone: ${phone}<br/><br/>${message}`,
   };
-  console.log('messaged acutally sent');
-  response.status(200)
-  // mail.send(msg)
-  //   .then(() => {
-  //     console.log("Email sent");
-  //     response.status(200)
-  //   })
-  //   .catch((error) => {
-  //     console.error(error);
-  //   });
+  // console.log('messaged acutally sent');
+  // response.status(200);
+  mail.send(msg)
+    .then(() => {
+      console.log("Email sent");
+      response.status(200)
+    })
+    .catch((error) => {
+      console.error(error);
+    });
 }
