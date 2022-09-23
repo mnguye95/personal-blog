@@ -10,7 +10,16 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^1.1.5"
+    "@astrojs/image": "^0.7.1",
+    "@fontsource/bungee": "^4.5.8",
+    "@fontsource/germania-one": "^4.5.9",
+    "@fontsource/montserrat": "^4.5.12",
+    "@fontsource/space-grotesk": "^4.5.10",
+    "@nanostores/react": "^0.4.0",
+    "@sendgrid/mail": "^7.7.0",
+    "astro": "^1.1.5",
+    "nanostores": "^0.7.0",
+    "vercel": "^28.4.2"
   },
   "devDependencies": {
     "@astrojs/react": "^1.1.1",
