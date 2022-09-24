@@ -3,14 +3,14 @@ import Layout from '../layouts/Layout.astro';
 const posts = await Astro.glob('../posts/*.md')
 ---
 
-<Layout title="Blog">
+<Layout title="Blog - Michael's Machinations">
 	<main>
 		<h3 class="md:text-4xl text-2xl text-honey-yellow text-center">Blog</h3>
-		<div class="flex flex-col m-4">
+		<div class="grid grid-cols-3 gap-4">
 			{posts.map(post => (
-				<div class="flex flex-col mb-3 text-center">
-					<h3 class="font-bold font-space-cadet text-light-cyan md:text-3xl text-2xl "><a href={`/${post.frontmatter.slug}`}>{post.frontmatter.title}</a></h3>
-					<p class="font-medium md:text-xl text-lg text-honeydew">{post.frontmatter.excerpt}</p>
+				<div onclick={`location.href='${post.frontmatter.slug}'`} class="flex flex-col md:text-xl text-lg font-space-grotesk text-space-cadet group bg-light-cyan cursor-pointer shadow-rb border-b border-r border-space-cadet p-3 m-3">
+					<h3 class="font-bold font-space-grotesk md:text-lg text-md text-md group-hover:underline underline-offset-8 decoration-4 mb-2"><a href={`/${post.frontmatter.slug}`}>{post.frontmatter.title}</a></h3>
+					<p class="font-medium md:text-md text-sm text-space-cadet">{post.frontmatter.excerpt}</p>
 				</div>
 			))}
 		</div>
