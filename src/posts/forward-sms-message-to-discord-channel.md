@@ -6,4 +6,4 @@ date: 2022-09-22
 author: Michael Nguyen
 ---
 
-First, [create an account](https://www.twilio.com/code-exchange/sms-forwarding-multiple-numbers), get a Twilio phone number, and deploy the application
+First, [create an account](https://www.twilio.com/code-exchange/sms-forwarding-multiple-numbers), get a Twilio phone number, and deploy the application.
