@@ -2,7 +2,7 @@
 title: "Rank #1 on Google for Local Business"
 slug: rank-google-local-business
 excerpt: Here's a checklist of what local businesses should do if they want to rank on Google.
-date: 2022-09-23
+date: 2022-09-20
 author: Michael Nguyen
 ---
 

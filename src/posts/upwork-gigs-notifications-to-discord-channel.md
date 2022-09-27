@@ -2,7 +2,7 @@
 title: Get Upwork Gig Notifications Sent To Discord Channel
 slug: upwork-gigs-notifications-to-discord-channel
 excerpt: Be first to apply to Upwork Gigs that fit your criteria and expertise.
-date: 2022-09-23
+date: 2022-09-19
 author: Michael Nguyen
 ---
 

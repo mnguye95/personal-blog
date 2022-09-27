@@ -1,4 +1,4 @@
-<!-- ---
+---
 import Layout from "../layouts/Layout.astro";
 
 export async function getStaticPaths() {
@@ -10,11 +10,18 @@ export async function getStaticPaths() {
         props: {
             post
         }
-}));
+    }   
+    ))
+}
 
-const {Content, frontmatter} = Astro.props.post;
+const { Content, frontmatter } = Astro.props.post ;
+
 ---
 
 <Layout title={frontmatter.title}>
-    
-</Layout> -->
+	<main class="max-w-[900px] md:mx-auto m-0 mt-5">
+		<h1 class="md:text-2xl text-xl text-honey-yellow text-center mb-5">{frontmatter.title}</h1>
+        <p class="font-space-grotesk text-sm text-honey-yellow text-center mb-3">{new Date(frontmatter.date).toLocaleString(undefined, {dateStyle: 'long'})}</p>
+            <span class="[&_p]:text-honeydew [&_p]:text-lg [&_h2]:text-light-cyan [&_h1]:text-light-cyan [&_h1]:text-2xl [&_a]:text-deep-saffron hover:[&_a]:underline hover:[&_a]:underline-offset-8 hover:[&_a]:decoration-1"><Content /></span>
+    </main>
+</Layout>

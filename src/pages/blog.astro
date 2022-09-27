@@ -6,10 +6,11 @@ const posts = await Astro.glob('../posts/*.md')
 <Layout title="Blog - Michael's Machinations">
 	<main>
 		<h3 class="md:text-4xl text-2xl text-honey-yellow text-center">Blog</h3>
-		<div class="grid grid-cols-3 gap-4">
+		<div class="grid md:grid-cols-3 gap-4">
 			{posts.map(post => (
-				<div onclick={`location.href='${post.frontmatter.slug}'`} class="flex flex-col md:text-xl text-lg font-space-grotesk text-space-cadet group bg-light-cyan cursor-pointer shadow-rb border-b border-r border-space-cadet p-3 m-3">
+				<div onclick={`location.href='${post.frontmatter.slug}'`} class="flex flex-col md:text-xl text-lg font-space-grotesk text-space-cadet group bg-light-cyan cursor-pointer shadow-rb border-b border-r border-space-cadet rounded-sm p-3 m-3">
 					<h3 class="font-bold font-space-grotesk md:text-lg text-md text-md group-hover:underline underline-offset-8 decoration-4 mb-2"><a href={`/${post.frontmatter.slug}`}>{post.frontmatter.title}</a></h3>
+					<time class="font-bold font-space-grotesk text-xs mb-2">{new Date(post.frontmatter.date).toLocaleString(undefined, {dateStyle: 'long'})}</time>
 					<p class="font-medium md:text-md text-sm text-space-cadet">{post.frontmatter.excerpt}</p>
 				</div>
 			))}
