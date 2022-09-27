@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 }
 
 const { Content, frontmatter } = Astro.props.post ;
-
+console.log(Astro.props)
 ---
 
 <Layout title={frontmatter.title}>

@@ -6,6 +6,21 @@ import TechStack from "../sections/TechStack.astro";
 import Hero from "../sections/Hero.astro";
 import Clients from "../sections/Clients.astro";
 import ContactForm from "../sections/Contact.astro";
+import fs from 'fs';
+
+// export async function getStaticProps() {
+//   const fileNames = fs.readdirSync(postsDirectory);
+// 	var fileStream = fs.createReadStream(`./public/files/resume.pdf`);
+// 	const chunks = []
+// 	for await (let chunk of fileStream) {
+// 		chunks.push(chunk)
+// 	}
+// 	// return { body: Buffer.concat(chunks), encoding: 'binary' };
+// 	return new Response(Buffer.concat(chunks), {
+// 		status: 200,
+// 		headers: { 'content-type': `application/pdf` },
+// 	});
+// }
 ---
 
 <Layout>
