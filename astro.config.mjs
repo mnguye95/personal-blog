@@ -4,7 +4,7 @@ import react from '@astrojs/react';
 import image from '@astrojs/image';
 import sitemap from "@astrojs/sitemap";
 
-import vercel from "@astrojs/vercel/serverless";
+import vercel from "@astrojs/vercel/static";
 
 // https://astro.build/config
 export default defineConfig({
