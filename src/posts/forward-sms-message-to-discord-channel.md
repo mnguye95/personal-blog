@@ -9,20 +9,20 @@ author: Michael Nguyen
 ### Step 1: Create a Discord Channel
 
 Start by click on this icon on your Discord app.
-![Create Discord Server Button](public\images\create-server-button.jpg "Create Discord Server Button")
+![Create Discord Server Button](/images/create-server-button.jpg "Create Discord Server Button")
 Go through the steps, name your server, and voila. You got yourself a Discord server.
 
 Next, find a channel you would like to send messages to. Click on this icon to "Edit Channel".
 
-![Text Channel Settings](public\images\discord-server-settings.jpg "Text Channel Settings")
+![Text Channel Settings](/images/discord-server-settings.jpg "Text Channel Settings")
 
 In "Integrations", create a webhook.
 
-![Create a Webhook Bot](public\images\create-webhook-button.png "Create a Webhook Bot")
+![Create a Webhook Bot](/images/create-webhook-button.png "Create a Webhook Bot")
 
 Name the bot anything you like, hit save, and save the webhook URL for the later steps.
 
-![Save Webhook URL](public\images\copy-webhook.jpg "Save Webhook URL")
+![Save Webhook URL](/images/copy-webhook.jpg "Save Webhook URL")
 
 ### Step 2: Twilio Setup
 
@@ -31,12 +31,12 @@ Name the bot anything you like, hit save, and save the webhook URL for the later
 Once deployed, click "Go to live application". and click the "Edit this application" button.
 
 Under Settings -> Environment Variables, add a new key named **DISCORD_WEBHOOK_URL** and paste in your webhook we saved from the last step.
-![Add Discord Webhook URL as Environment Variable](public\images\env-vars.jpg "Add Discord Webhook URL as Environment Variable")
+![Add Discord Webhook URL as Environment Variable](/images/env-vars.jpg "Add Discord Webhook URL as Environment Variable")
 Under Settings -> Dependencies, add module **`got 11.8.3`** _(Be sure to use this version!)_
-![Add dependency to node environment](public\images\adding-got-dependency.jpg "Add dependency to node environment")
+![Add dependency to node environment](/images/adding-got-dependency.jpg "Add dependency to node environment")
 
 Go to Functions and select your function file. 
-![Add Discord Webhook URL as Environment Variable](public\images\replace-code-before.jpg "Add Discord Webhook URL as Environment Variable")
+![Add Discord Webhook URL as Environment Variable](/images/replace-code-before.jpg "Add Discord Webhook URL as Environment Variable")
 Delete the boilerplate code and add the follow snippet:
 ```javascript
 const twiml = new Twilio.twiml.MessagingResponse();
@@ -62,7 +62,7 @@ got.post(url, options)
 <br>  
 
 Now, click Deploy All.
-![Add Code Snippet to Function](public\images\replace-code-after.png "Add Code Snippet to Function")
+![Add Code Snippet to Function](/images/replace-code-after.png "Add Code Snippet to Function")
 
 Test it by sending a text message to your Twilio phone number and you should receive the text in your Discord channel.
 
@@ -72,9 +72,9 @@ And there you go, you have successfully forwarded SMS messages to a Discord chan
 
 Once you've signed in, you should see the dashboard. Click on the Develop tab to see your latest application. 
 
-![Twilio Dashboard](public\images\twilio-dashboard.jpg "Twilio Dashboard")
+![Twilio Dashboard](/images/twilio-dashboard.jpg "Twilio Dashboard")
 
 Next, click on Functions and Assets -> Services, and click on your application to edit.
 
-![Twilio Services Tab](public\images\services.jpg "Twilio Services Tab") -->
+![Twilio Services Tab](/images/services.jpg "Twilio Services Tab") -->
 
