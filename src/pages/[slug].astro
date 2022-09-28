@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from '@astrojs/image/components';
 
 export async function getStaticPaths() {
     const posts = await Astro.glob('../posts/*.md');
@@ -15,13 +16,17 @@ export async function getStaticPaths() {
 }
 
 const { Content, frontmatter } = Astro.props.post ;
-
 ---
 
 <Layout title={frontmatter.title}>
-	<main class="max-w-[900px] md:mx-auto m-0 mt-5">
+	<main class="max-w-[900px] md:mx-auto m-0 mt-5 [&_img]:mx-auto">
 		<h1 class="md:text-2xl text-xl text-honey-yellow text-center mb-5">{frontmatter.title}</h1>
         <p class="font-space-grotesk text-sm text-honey-yellow text-center mb-3">{new Date(frontmatter.date).toLocaleString(undefined, {dateStyle: 'long'})}</p>
-            <span class="[&_p]:text-honeydew [&_p]:text-lg [&_h2]:text-light-cyan [&_h1]:text-light-cyan [&_h1]:text-2xl [&_a]:text-deep-saffron hover:[&_a]:underline hover:[&_a]:underline-offset-8 hover:[&_a]:decoration-1"><Content /></span>
+        <span class="[&_p]:text-honeydew [&_p]:text-lg [&_p]:mb-5 [&_h3]:bg-black [&_h3]:p-3 [&_h3]:m-3 [&_h3]:rounded-md [&_h3]:text-light-cyan [&_h2]:text-light-cyan [&_h1]:text-light-cyan [&_h1]:text-2xl [&_a]:text-deep-saffron hover:[&_a]:underline hover:[&_a]:underline-offset-8 hover:[&_a]:decoration-1 [&_img]:my-6">
+            <Content />
+        </span>
+        <a class="item-bottom" href='https://www.buymeacoffee.com/michaelnguyen'>
+            <Image aspectRatio={16/9} height='50px' alt="Buy Michael A Coffee" src='/images/bmc-button.png'/>
+        </a>
     </main>
 </Layout>
