@@ -1,12 +1,12 @@
 ---
-title: Forward SMS Message to Discord Channel Using Twilio
-slug: forward-sms-message-to-discord-channel-using-twilio
+title: Forward SMS Message to Discord Channel Using Twilio Functions
+slug: forward-sms-message-to-discord-channel-using-twilio-functions
 excerpt: Forward SMS messages to any discord channel using webhooks and Twilio.
 date: 2022-09-22
 author: Michael Nguyen
 ---
 
-### Step 1: Create a Discord Channel
+## Step 1: Create a Discord Channel
 
 Start by click on this icon on your Discord app.
 ![Create Discord Server Button](/images/create-server-button.jpg "Create Discord Server Button")
@@ -24,7 +24,7 @@ Name the bot anything you like, hit save, and save the webhook URL for the later
 
 ![Save Webhook URL](/images/copy-webhook.jpg "Save Webhook URL")
 
-### Step 2: Twilio Setup
+## Step 2: Twilio Setup
 
 [Create an account](https://www.twilio.com/referral/hGuW9u) or sign into Twilio, and [deploy this application](https://www.twilio.com/code-exchange/sms-forwarding-multiple-numbers).
 
@@ -39,30 +39,33 @@ Go to Functions and select your function file.
 ![Add Discord Webhook URL as Environment Variable](/images/replace-code-before.jpg "Add Discord Webhook URL as Environment Variable")
 Delete the boilerplate code and add the follow snippet:
 ```javascript
-const twiml = new Twilio.twiml.MessagingResponse();
-const { default: got } = await import('got');
-const url = context.DISCORD_WEBHOOK_URL;
-const options = {
-    json: {
-        username: "Your Bot's Name", // Add your bot's name
-        avatar_url: "", // Add an profile image for the bot
+// Make sure the function is async!
+exports.handler = async function (context, event, callback) {
+    const twiml = new Twilio.twiml.MessagingResponse();
+    const { default: got } = await import('got');
+    const url = context.DISCORD_WEBHOOK_URL;
+
+    const options = {
+        json: {
+        username: "Your Bot Name",
+        avatar_url: "",
         content: `${event.Body}`
+        }
     }
-}
 
-got.post(url, options)
-.then(function(response) {
-    console.log(response.body)
-    callback(null, twiml);
+    got.post(url, options)
+        .then(function(response) {
+        console.log(response.body)
+    });
+};
 
-}).catch(function(error) {
-    callback(error)
-});
 ```
 <br>  
 
 Now, click Deploy All.
 ![Add Code Snippet to Function](/images/replace-code-after.png "Add Code Snippet to Function")
+
+## Step 3: Deploy and Test
 
 Test it by sending a text message to your Twilio phone number and you should receive the text in your Discord channel.
 

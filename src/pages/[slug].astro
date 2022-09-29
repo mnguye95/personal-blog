@@ -4,7 +4,8 @@ import { Image } from '@astrojs/image/components';
 
 export async function getStaticPaths() {
     const posts = await Astro.glob('../posts/*.md');
-    return posts.map(post => ({
+    const nonDraftPosts = posts.filter((post) => !post.frontmatter.draft);
+    return nonDraftPosts.map(post => ({
         params: {
             slug: post.frontmatter.slug
         },
@@ -22,7 +23,7 @@ const { Content, frontmatter } = Astro.props.post ;
 	<main class="max-w-[900px] md:mx-auto m-0 mt-5 [&_img]:mx-auto">
 		<h1 class="md:text-2xl text-xl text-honey-yellow text-center mb-5">{frontmatter.title}</h1>
         <p class="font-space-grotesk text-sm text-honey-yellow text-center mb-3">{new Date(frontmatter.date).toLocaleString(undefined, {dateStyle: 'long'})}</p>
-        <span class="[&_p]:text-honeydew [&_p]:text-lg [&_p]:mb-5 [&_h3]:bg-black [&_h3]:p-3 [&_h3]:m-3 [&_h3]:rounded-md [&_h3]:text-light-cyan [&_h2]:text-light-cyan [&_h1]:text-light-cyan [&_h1]:text-2xl [&_a]:text-deep-saffron hover:[&_a]:underline hover:[&_a]:underline-offset-8 hover:[&_a]:decoration-1 [&_img]:my-6">
+        <span class="[&_p]:text-honeydew [&_p]:text-lg [&_p]:mb-5 [&_h2]:bg-black [&_h2]:p-3 [&_h2]:m-3 [&_h2]:rounded-md [&_h2]:text-light-cyan md:[&_h2]:text-xl [&_h2]:text-lg md:[&_h2]:text-left [&_h2]:text-center [&_h1]:text-light-cyan [&_h1]:text-2xl [&_a]:text-deep-saffron hover:[&_a]:underline hover:[&_a]:underline-offset-8 hover:[&_a]:decoration-1 [&_img]:my-6 md:[&_pre]:p-5 [&_pre]:p-3 [&_pre]:rounded-md md:[&_span]:text-sm [&_span]:text-xs">
             <Content />
         </span>
         <a href='https://www.buymeacoffee.com/michaelnguyen'>
