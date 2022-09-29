@@ -8,7 +8,7 @@ author: Michael Nguyen
 
 Astro, React, and Vercel...
 
-With Astro being a little over year old, building an app with this tech stack may feel like trending unknown waters.
+With Astro being a little over year old at the time of this blog, building an app with this stack may feel like trending unknown waters.
 
 ## Setting up Sendgrid STMP and Adding Environment Variables in Astro JS
 
@@ -104,10 +104,10 @@ npm install nanostores
 ```
 <br>  
 
-Create a folder called 'store' at your project root and create a file named 'message.jsx' inside.
+Create a folder called 'store' at your project root and create a file named 'details.jsx' inside.
 ```
 ├── store/
-│   └── message.jsx
+│   └── details.jsx
 ├── api
 ├── public
 ├── src
@@ -117,13 +117,13 @@ Create a folder called 'store' at your project root and create a file named 'mes
 
 <br>  
 
-Add this to 'message.jsx':
+Add this to 'details.jsx':
 
 ```javascript
-// src/stores/message.jsx
+// src/stores/details.jsx
 import { map } from 'nanostores'
 
-export const Message = map({
+export const Details = map({
     email: '',
     phone: '',
     message: '',
@@ -136,7 +136,7 @@ With nanostores, the state is managed by an external file called a store.
 
 To import the store into your component:
 ```javascript
-import { Message } from '../store/message';
+import { Details } from '../store/details';
 ```
 <br>  
 
@@ -151,11 +151,11 @@ import { useStore } from '@nanostores/react'
 // src/components/ContactForm.jsx
 import { React } from 'react'
 import { useStore } from '@nanostores/react'
-import { Message } from '../store/message';
+import { Details } from '../store/details';
 
 const ContactForm = () => {
 
-    const message = useStore(Message); 
+    const details = useStore(Details); 
 
     return (
         <div>
@@ -185,17 +185,17 @@ This will update our store on each keystroke from our visitor.
 // src/components/ContactForm.jsx
 import { React } from 'react'
 import { useStore } from '@nanostores/react'
-import { Message } from '../store/message';
+import { Details } from '../store/details';
 
 const ContactForm = () => {
 
-    const message = useStore(Message);
+    const details = useStore(Details);
 
     return (
         <div>
             <form onSubmit={}>
                 <textarea 
-                    onChange={(e) => Message.setKey('message', e.target.value)} 
+                    onChange={(e) => Details.setKey('message', e.target.value)} 
                     name="message"
                     id='message'
                     placeholder="Enter your message"
@@ -204,19 +204,19 @@ const ContactForm = () => {
                     required/>
                 <div>
                     <input 
-                        onChange={(e) => Message.setKey('email', e.target.value)}
+                        onChange={(e) => Details.setKey('email', e.target.value)}
                         name="email"
                         type="email"
                         placeholder="Email"
                         required />
                     <input
-                        onChange={(e) => Message.setKey('phone', e.target.value)} 
+                        onChange={(e) => Details.setKey('phone', e.target.value)} 
                         name="phone"
                         type="text"
                         placeholder="Phone Number"
                         required />
                 </div>
-                <button type='submit'>{message.sent ? 'Sent!' : 'Send Message'}</button>
+                <button type='submit'>{message.sent ? 'Sent!' : 'Send Details'}</button>
             </form>
         </div>
     )
@@ -233,20 +233,20 @@ Now, we'll need to send a request to our /api/send/ route.
 // src/components/ContactForm.jsx
 import { React } from 'react'
 import { useStore } from '@nanostores/react'
-import { Message } from '../store/message';
+import { Details } from '../store/details';
 
 const ContactForm = () => {
 
-    const message = useStore(Message);   // Accessing our states
+    const details = useStore(Details);   // Accessing our states
 
     const handleSubmit  = async (e) => {
         e.preventDefault();
-        if (!message.sent) {             // Check if the message is sent already
-            Message.setKey('sent', true) // Set 'sent' to true to prevent form spam click
+        if (!details.sent) {             // Check if the message is sent already
+            Details.setKey('sent', true) // Set 'sent' to true to prevent form spam click
             const params = {
-                email: message.email,    // Making states into a request query
-                phone: message.phone,
-                message: message.message,
+                email: details.email,    // Making states into a request query
+                phone: details.phone,
+                message: details.message,
             }                            // Request to serverless function with the query
             await fetch('/api/send?' + new URLSearchParams(params))
                 .then((res) => {

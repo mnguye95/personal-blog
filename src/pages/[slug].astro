@@ -26,8 +26,16 @@ const { Content, frontmatter } = Astro.props.post ;
         <span class="[&_p]:text-honeydew [&_p]:text-lg [&_p]:mb-5 [&_h2]:bg-black [&_h2]:p-3 [&_h2]:m-3 [&_h2]:rounded-md [&_h2]:text-light-cyan md:[&_h2]:text-xl [&_h2]:text-lg md:[&_h2]:text-left [&_h2]:text-center [&_h1]:text-light-cyan [&_h1]:text-2xl [&_a]:text-deep-saffron hover:[&_a]:underline hover:[&_a]:underline-offset-8 hover:[&_a]:decoration-1 [&_img]:my-6 md:[&_pre]:p-5 [&_pre]:p-3 [&_pre]:rounded-md md:[&_span]:text-sm [&_span]:text-xs">
             <Content />
         </span>
-        <a href='https://www.buymeacoffee.com/michaelnguyen'>
-            <img width="179px" height='50px' alt="Buy Michael A Coffee" src='/images/bmc-button.png'/>
+        <a href='https://www.buymeacoffee.com/michaelnguyen' >
+            <img class="mb-8" width="179px" height='50px' alt="Buy Michael A Coffee" src='/images/bmc-button.png'/>
         </a>
+        <script 
+            src="https://utteranc.es/client.js"
+            repo="mnguye95/personal-blog"
+            issue-term="pathname"
+            theme="github-dark"
+            crossorigin="anonymous"
+            async>
+        </script>
     </main>
 </Layout>
