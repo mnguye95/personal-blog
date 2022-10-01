@@ -8,7 +8,7 @@ export default function handler(req, res) {
   
     res.setHeader('Content-Type', 'application/pdf');
     return res.end(b);
-  }
+}
   
 //// SSR Route
 // export const get = async function get() {

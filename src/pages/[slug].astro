@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Image } from '@astrojs/image/components';
 
 export async function getStaticPaths() {
     const posts = await Astro.glob('../posts/*.md');
@@ -19,21 +18,39 @@ export async function getStaticPaths() {
 const { Content, frontmatter } = Astro.props.post ;
 ---
 
-<Layout title={frontmatter.title}>
-	<main class="max-w-[900px] md:mx-auto m-0 mt-5 [&_img]:mx-auto">
+<Layout 
+    title={frontmatter.title} 
+    desc={frontmatter.description} 
+    url={Astro.url.toString()}>
+
+	<main class="max-w-[900px] md:mx-auto m-0 mt-5">
 		<h1 class="md:text-2xl text-xl text-honey-yellow text-center mb-5">{frontmatter.title}</h1>
-        <p class="font-space-grotesk text-sm text-honey-yellow text-center mb-3">{new Date(frontmatter.date).toLocaleString(undefined, {dateStyle: 'long'})}</p>
-        <span class="[&_p]:text-honeydew [&_p]:text-lg [&_p]:mb-5 [&_h2]:bg-black [&_h2]:p-3 [&_h2]:m-3 [&_h2]:rounded-md [&_h2]:text-light-cyan md:[&_h2]:text-xl [&_h2]:text-lg md:[&_h2]:text-left [&_h2]:text-center [&_h1]:text-light-cyan [&_h1]:text-2xl [&_a]:text-deep-saffron hover:[&_a]:underline hover:[&_a]:underline-offset-8 hover:[&_a]:decoration-1 [&_img]:my-6 md:[&_pre]:p-5 [&_pre]:p-3 [&_pre]:rounded-md md:[&_span]:text-sm [&_span]:text-xs">
+        <p class="font-space-grotesk text-sm text-honey-yellow text-center mb-3">Last updated: <time>{new Date(frontmatter.date).toLocaleString(undefined, {dateStyle: 'long'})}</time></p>
+        <p class="my-5 text-light-cyan text-xs text-center font-space-grotes mx-auto">This post may contain affiliate links. <br> If you use these links to buy something, I may earn a commission. Thank you!</p>
+        <span class="[&_img]:mx-auto [&_p]:text-honeydew [&_p]:text-lg [&_p]:mb-5 [&_h2]:max-w-lg [&_h2]:bg-black [&_h2]:p-3 [&_h2]:m-3 [&_h2]:rounded-md [&_h2]:text-light-cyan md:[&_h2]:text-xl [&_h2]:text-lg [&_h2]:mx-auto [&_h2]:text-center [&_h1]:text-light-cyan [&_h1]:text-2xl [&_a]:text-deep-saffron hover:[&_a]:underline hover:[&_a]:underline-offset-8 hover:[&_a]:decoration-1 [&_img]:my-6 md:[&_pre]:p-5 [&_pre]:p-3 [&_pre]:rounded-md md:[&_span]:text-sm [&_span]:text-xs">
             <Content />
         </span>
-        <a href='https://www.buymeacoffee.com/michaelnguyen' >
-            <img class="mb-8" width="179px" height='50px' alt="Buy Michael A Coffee" src='/images/bmc-button.png'/>
-        </a>
+        <div class="flex bg-[#0d1117] rounded-md justify-center mb-8 p-1 mx-auto max-w-sm">
+            <div class="flex flex-col w-1/2 items-center justify-center p-5 mx-auto">
+                <img width="150px" height="150px" alt="" class="border-2 border-honey-yellow bg-[url('/images/me.jpeg')] bg-no-repeat bg-cover rounded-full" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAA" />
+            </div>
+            <div class="flex flex-col justify-center w-1/2 mx-auto md:mx-0 text-center md:text-left">
+                <p class="font-space-grotesk text-md text-honey-yellow mb-2">Michael Nguyen</p>
+                <p class="font-space-grotesk text-md text-light-cyan mb-3">Front End Developer</p>
+                <a href='https://www.buymeacoffee.com/michaelnguyen' >
+                    <img
+                        class="md:w-[143px] md:h-[40px] w-[135px] h-[35px] md:mx-0 mx-auto"
+                        alt="Buy Michael A Coffee" 
+                        src='/images/bmc-button.png'/>
+                </a>
+            </div>
+        </div>
+        <!-- Utterance comment plugin -->
         <script 
             src="https://utteranc.es/client.js"
             repo="mnguye95/personal-blog"
             issue-term="pathname"
-            theme="github-dark"
+            theme="dark-blue"
             crossorigin="anonymous"
             async>
         </script>

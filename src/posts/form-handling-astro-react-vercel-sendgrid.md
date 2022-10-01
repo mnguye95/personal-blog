@@ -3,12 +3,10 @@ title: Form Handling in Astro with React, Vercel, and SendGrid
 slug: form-handling-astro-react-vercel-sendgrid
 excerpt: Receive form submissions with your Astro app on serverless functions provided by Vercel and SendGrid
 date: 2022-09-23
-author: Michael Nguyen
+description: Form submissions are used to receive leads and inquiries on our website. With Astro, React, and Vercel, it's possible! 
 ---
 
-Astro, React, and Vercel...
-
-With Astro being a little over year old at the time of this blog, building an app with this stack may feel like trending unknown waters.
+With Astro being a little over a year old at the time of this blog, building an app with this stack was a shot in the dark, but I got it!
 
 ## Setting up Sendgrid STMP and Adding Environment Variables in Astro JS
 
@@ -45,7 +43,6 @@ vercel dev
 <br>  
 
 Add a directory called **"api"** in the root of your Astro project and add a JS file named **"send.js"** into that folder.
-
 
 ```
 ├── api/
@@ -89,7 +86,7 @@ export default function handler(request, response) {
 
 ## State management in Astro and React with nanostores
 
-***React's useState and other hooks are not supported in Astro.***
+***React's useState and other hooks are not supported in Astro at the time of this blog.***
 
 Instead, [Astro recommends using nanostores](https://docs.astro.build/en/core-concepts/sharing-state/) to pass state values between components.
 
@@ -114,7 +111,6 @@ Create a folder called 'store' at your project root and create a file named 'det
 ├── .env
 └── ...
 ```
-
 <br>  
 
 Add this to 'details.jsx':
@@ -145,7 +141,6 @@ We can mutilate and access the states in the store file with the 'useStore' func
 import { useStore } from '@nanostores/react'
 ```
 <br>  
-
 
 ```javascript
 // src/components/ContactForm.jsx
@@ -268,6 +263,31 @@ const ContactForm = () => {
 
 export default ContactForm
 ```
-
 <br>  
+
+Once a visitor clicks the submit button, the ***handleSubmit*** function will make a POST request to the serverless function we have at **/api/send**.
+
+## Deploying your Astro + React app to Vercel
+
+At the time of this blog, I couldn't figure out why the [SSR adapter for Astro](https://docs.astro.build/en/guides/server-side-rendering/) would not generate my dynamic routes. Ultimately, Astro works perfectly with the 'static' flag for the astro.config.mjs file.
+
+```javascript
+// astro.config.mjs
+import { defineConfig } from 'astro/config';
+import react from '@astrojs/react';
+// import vercel from '@astrojs/vercel/serverless';
+
+// https://astro.build/config
+export default defineConfig({
+  integrations: [react()],
+  output: 'static',
+//   output: 'server', // Couldn't get Astro to work with dynamic routes here
+//   adapter: vercel()
+});
+```
+<br>  
+
+Although the adapter is supposed to enable server-side rendering, Astro would ignore the 'getStaticPaths()' at build time. If you have a fix for this, please let me know down in the comments!
+
+Thank you for reading this blog, I hope it helped!
 

@@ -1,9 +1,9 @@
 ---
-title: Forward SMS Message to Discord Channel Using Twilio Functions
-slug: forward-sms-message-to-discord-channel-using-twilio-functions
+title: Forward SMS Message to Discord Using Twilio
+slug: forward-sms-message-to-discord-using-twilio
 excerpt: Forward SMS messages to any discord channel using webhooks and Twilio.
 date: 2022-09-22
-author: Michael Nguyen
+description: Receive text messages into any channel! Add value to your Discord server with valuable notifications to your members.
 ---
 
 ## Step 1: Create a Discord Channel
@@ -31,13 +31,19 @@ Name the bot anything you like, hit save, and save the webhook URL for the later
 Once deployed, click "Go to live application". and click the "Edit this application" button.
 
 Under Settings -> Environment Variables, add a new key named **DISCORD_WEBHOOK_URL** and paste in your webhook we saved from the last step.
+
 ![Add Discord Webhook URL as Environment Variable](/images/env-vars.jpg "Add Discord Webhook URL as Environment Variable")
+
 Under Settings -> Dependencies, add module **`got 11.8.3`** _(Be sure to use this version!)_
+
 ![Add dependency to node environment](/images/adding-got-dependency.jpg "Add dependency to node environment")
 
 Go to Functions and select your function file. 
+
 ![Add Discord Webhook URL as Environment Variable](/images/replace-code-before.jpg "Add Discord Webhook URL as Environment Variable")
+
 Delete the boilerplate code and add the follow snippet:
+
 ```javascript
 // Make sure the function is async!
 exports.handler = async function (context, event, callback) {
@@ -58,11 +64,11 @@ exports.handler = async function (context, event, callback) {
         console.log(response.body)
     });
 };
-
 ```
 <br>  
 
 Now, click Deploy All.
+
 ![Add Code Snippet to Function](/images/replace-code-after.png "Add Code Snippet to Function")
 
 ## Step 3: Deploy and Test
