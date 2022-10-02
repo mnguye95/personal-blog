@@ -13,13 +13,13 @@ Here is that checklist:
 
 ## 1. Create a Website
 
-I have had some clients who run an entire local business without a website. The amount of money left on the table was mind blowing.
+I had some clients who ran businesses without a website. I let them know there's money left on the table.
 
-Upon launching a website, my clients received too much business that they had to hire a call center and a sales floor to keep up with demand.
+After launching their sites and growing them over a year or two, they had to hire a call center to keep up with demand.
 
-A well-designed, fast website is a [Hand of Midas](https://en.wikipedia.org/wiki/Midas) so don't skimp out.
+A well-designed, fast website is like a digital storefront residing on Google Street.
 
-This checklist, however, won't show you how to create an effective website. I'll save that topic for another post.
+But this checklist won't show you how to create an effective website. I'll save that topic for another post.
 
 But if you want to play around with a website builder, I personally use [Bluehost](https://bluehost.com/) for my clients.
 
