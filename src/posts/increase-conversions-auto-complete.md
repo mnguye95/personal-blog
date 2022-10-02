@@ -35,27 +35,27 @@ Head over to the [Google Maps API console](https://console.cloud.google.com/proj
 
 Sign in and create and name your project. If you don't have an organization, you can just leave it blank.
 
-![Create Project in Google API Console](/images/create-google-console-project.png "Create Project in Google API Console")
+![Create Project in Google API Console](/assets/images/increase-conversions-auto-complete/create-google-console-project.png "Create Project in Google API Console")
 
 Select your project you've just created.
 
-![Select Project in Google API Console](/images/select-project.png "Select Project in Google API Console")
+![Select Project in Google API Console](/assets/images/increase-conversions-auto-complete/select-project.png "Select Project in Google API Console")
 
 You should see the API key generated for you immediately. 
 
 Disable "Enable all Google Maps APIs..." and go to the console.
 
-![Retreive Google API Key](/images/google-api-key.png "Retreive Google API Key")
+![Retreive Google API Key](/assets/images/increase-conversions-auto-complete/google-api-key.png "Retreive Google API Key")
 
 Under APIs, click 'Places API' and enable. You should see it under "Enabled APIs".
 
-![Enabling Places API](/images/finding-places-api.png "Enabling Places API")
+![Enabling Places API](/assets/images/increase-conversions-auto-complete/finding-places-api.png "Enabling Places API")
 
-![Enabled Places API](/images/places-api-enabled.png "Enabled Places API")
+![Enabled Places API](/assets/images/increase-conversions-auto-complete/places-api-enabled.png "Enabled Places API")
 
 If you lost your API key, it's located under Credentials -> API keys -> "Show Key"
 
-![Where to find the API key if you lost it](/images/show-api-key.png "Where to find the API key if you lost it")
+![Where to find the API key if you lost it](/assets/images/increase-conversions-auto-complete/show-api-key.png "Where to find the API key if you lost it")
 
 I'm using [Elementor](https://be.elementor.com/visit/?bta=13962&brand=elementor) as my Wordpress page builder. You can use any page or form builder. This plugin works with any form that has an 'id' attribute.
 
@@ -63,9 +63,9 @@ Head over to your Wordpress website and find the form you'd like to have auto-co
 
 Right click the input field and select "Inspect". ***(Skip this step if you know your form ID)*** 
 
-![Inspect the form's code to find the form ID](/images/inspect-form.png "Inspect the form's code to find the form ID")
+![Inspect the form's code to find the form ID](/assets/images/increase-conversions-auto-complete/inspect-form.png "Inspect the form's code to find the form ID")
 
-![Find your Form ID in the Inspect Code window](/images/finding-form-id.png "Find your Form ID in the Inspect Code window")
+![Find your Form ID in the Inspect Code window](/assets/images/increase-conversions-auto-complete/finding-form-id.png "Find your Form ID in the Inspect Code window")
 
 Now that we have our form ID. Let's set up the plugin.
 
@@ -75,23 +75,23 @@ Download [Autocomplete Google Address](https://downloads.wordpress.org/plugin/au
 
 On your left navigation, go to Plugins -> Add New.
 
-![Go to your Wordpress dashboard](/images/wordpress-plugin.png "Go to your Wordpress dashboard")
+![Go to your Wordpress dashboard](/assets/images/increase-conversions-auto-complete/wordpress-plugin.png "Go to your Wordpress dashboard")
 
 Hit "Upload Plugin", choose the .zip file, and click Install.
 
-![Click Upload Plugin, choose your .zip file, and click Install](/images/installing-plugin.png "Click Upload Plugin, choose your .zip file, and click Install")
+![Click Upload Plugin, choose your .zip file, and click Install](/assets/images/increase-conversions-auto-complete/installing-plugin.png "Click Upload Plugin, choose your .zip file, and click Install")
 
 After you've activated the plugin, see your navigation bar again, and find "Autocomplete".
 
-![Find "Autocomplete" at Wordpress navigation](/images/finding-autocomplete.png "Find 'Autocomplete' at Wordpress navigation")
+![Find "Autocomplete" at Wordpress navigation](/assets/images/increase-conversions-auto-complete/finding-autocomplete.png "Find 'Autocomplete' at Wordpress navigation")
 
 Add your API Key and Form ID into the fields.
 
-![Add your API key and Form ID](/images/adding-api-key-id.png "Add your API key and Form ID")
+![Add your API key and Form ID](/assets/images/increase-conversions-auto-complete/adding-api-key-id.png "Add your API key and Form ID")
 
 Go to your form and begin typing a number.
 
-![Gif video of the final result](/images/autocomplete-result.gif "Gif video of the final result")
+![Gif video of the final result](/assets/images/increase-conversions-auto-complete/autocomplete-result.gif "Gif video of the final result")
 
 And there you go. We have successfully added autocomplete to your Wordpress form!
 

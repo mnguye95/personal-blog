@@ -80,7 +80,7 @@ After verifying, your profile should be live. I highly recommend you reach out t
 
 Your clients can write a review directly or through a review link found on your dashboard.
 
-![Google Review Form](/images/google-review-form.png "Google Review Form")
+![Google Review Form](/assets/images/create-server-button/google-review-form.png "Google Review Form")
 
 You should also post updates on your profile. Things worth sharing are:
 

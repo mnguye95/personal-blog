@@ -16,6 +16,23 @@ export async function getStaticPaths() {
 }
 
 const { Content, frontmatter } = Astro.props.post ;
+
+// // Article Schema
+let structedData = {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": `${frontmatter.title}`,
+      "image": [
+        "/assets/"
+       ],
+      "datePublished": "2015-02-05T08:00:00+08:00",
+      "dateModified": "2015-02-05T09:20:00+08:00",
+      "author": [{
+          "@type": "Person",
+          "name": "Michael Nguyen",
+          "url": "http://michael-nguyen.dev/"
+        }]
+}
 ---
 
 <Layout 
@@ -32,7 +49,7 @@ const { Content, frontmatter } = Astro.props.post ;
         </span>
         <div class="flex bg-[#0d1117] rounded-md justify-center mb-8 p-1 mx-auto max-w-sm">
             <div class="flex flex-col w-1/2 items-center justify-center p-5 mx-auto">
-                <img width="150px" height="150px" alt="" class="border-2 border-honey-yellow bg-[url('/images/me.jpeg')] bg-no-repeat bg-cover rounded-full" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAA" />
+                <img width="150px" height="150px" alt="" class="border-2 border-honey-yellow bg-[url('/assets/images/homepage/me.jpeg')] bg-no-repeat bg-cover rounded-full" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAA" />
             </div>
             <div class="flex flex-col justify-center w-1/2 mx-auto md:mx-0 text-center md:text-left">
                 <p class="font-space-grotesk text-md text-honey-yellow mb-2">Michael Nguyen</p>
@@ -41,7 +58,7 @@ const { Content, frontmatter } = Astro.props.post ;
                     <img
                         class="md:w-[143px] md:h-[40px] w-[135px] h-[35px] md:mx-0 mx-auto"
                         alt="Buy Michael A Coffee" 
-                        src='/images/bmc-button.png'/>
+                        src='/assets/images/homepage/bmc-button.png'/>
                 </a>
             </div>
         </div>

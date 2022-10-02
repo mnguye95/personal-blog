@@ -15,6 +15,7 @@ export interface Props {
   image?: string;
   twitter?: string;
   alt?: string;
+  schema?: object;
 }
 
 const {
@@ -26,6 +27,7 @@ const {
   name = config.name,
   twitter = config.twitter.handle,
   alt = config.name,
+  schema
 } = Astro.props as Props;
 ---
 
@@ -34,7 +36,7 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/assets/vectors/favicon.svg" />
     <!-- <link rel="icon" href="/images/favicon.png" /> -->
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
@@ -63,12 +65,15 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script type="application/ld+json">
+      {schema}
+    </script>
   </head>
   <body>
     <div class="flex flex-col min-h-screen max-w-[1240px] mx-auto md:p-10 p-5">
       <div class="mx-auto text-center w-full md:mb-10 mb-0">
         <h4
-          class="font-space-grotesk text-honey-yellow md:text-4xl text-2xl font-medium"
+          class="font-space-grotesk text-honey-yellow md:text-3xl text-2xl font-medium"
         >
           Michael Nguyen
         </h4>
@@ -130,43 +135,6 @@ const {
       </div>
     <slot />
     </div>
-    <style>
-      :root {
-        --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
-        --font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
-        --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
-
-        --color-text: hsl(12, 5%, 4%);
-        --color-bg: hsl(10, 21%, 95%);
-        --color-border: hsl(17, 24%, 90%);
-      }
-
-      html {
-        font-family: system-ui, sans-serif;
-        font-size: var(--font-size-base);
-        color: var(--color-text);
-        background-color: var(--color-bg);
-      }
-
-      body {
-        margin: 0;
-      }
-    </style>
-
-    <style is:global>
-      h1 {
-        font-size: var(--font-size-xl);
-      }
-
-      h2 {
-        font-size: var(--font-size-lg);
-      }
-
-      code {
-        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-      }
-    </style>
   </body>
   <footer class="flex flex-col gap-4 bg-[#161c34] w-full p-8 text-center justify-center">
   <p class="font-space-grotesk text-honey-yellow">Michael Nguyen © 2023</p>
@@ -203,3 +171,41 @@ const {
     <p class="font-space-grotesk text-honey-yellow">Made with Astro, React, and Tailwind.</p>
   </footer>
 </html>
+
+<style>
+  :root {
+    --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+    --font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
+    --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+
+    --color-text: hsl(12, 5%, 4%);
+    --color-bg: hsl(10, 21%, 95%);
+    --color-border: hsl(17, 24%, 90%);
+  }
+
+  html {
+    font-family: system-ui, sans-serif;
+    font-size: var(--font-size-base);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+  }
+
+  body {
+    margin: 0;
+  }
+</style>
+
+<style is:global>
+  h1 {
+    font-size: var(--font-size-xl);
+  }
+
+  h2 {
+    font-size: var(--font-size-lg);
+  }
+
+  code {
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  }
+</style>
