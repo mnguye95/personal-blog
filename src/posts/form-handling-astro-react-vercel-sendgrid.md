@@ -6,7 +6,7 @@ date: 2022-09-23
 description: Form submissions are used to receive leads and inquiries on our website. With Astro, React, and Vercel, it's possible! 
 ---
 
-With Astro being a little over a year old at the time of this blog, building an app with this stack was a shot in the dark, but I got it!
+Building an app with this stack was a shot in the dark, but I got it!
 
 ## Setting up Sendgrid STMP and Adding Environment Variables in Astro JS
 

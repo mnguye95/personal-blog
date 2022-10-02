@@ -4,7 +4,7 @@ slug: five-steps-rank-higher-google-local-business
 excerpt: Here's a checklist of what local businesses should do if they want to rank on Google.
 date: 2022-09-20
 author: Michael Nguyen
-description: Are you a local business? Ranking higher on Google shouldn't be hard. Follow this guide and increase our leads and sales. 
+description: Are you a local business? Ranking higher on Google shouldn't be hard. Follow this guide and increase your leads and sales. 
 ---
 
 While I was freelancing during the pandemic, I cultivated a checklist for my local SEO services.
@@ -13,31 +13,31 @@ Here is that checklist:
 
 ## 1. Create a Website
 
-I had some clients who ran businesses without a website. I let them know there's money left on the table.
+I had some clients who ran their business without a website, and I let them know there's money on the table.
 
-After launching their sites and growing them over a year or two, they had to hire a call center to keep up with demand.
+After 12 months into their website, they had to hire a call center to keep up with demand.
 
 A well-designed, fast website is like a digital storefront residing on Google Street.
 
-But this checklist won't show you how to create an effective website. I'll save that topic for another post.
+I won't show you how to do that for now, but I'll save that topic for another post.
 
-But if you want to play around with a website builder, I personally use [Bluehost](https://bluehost.com/) for my clients.
+If you really want to play around with a website builder, I personally use [Bluehost](https://bluehost.com/) for my clients.
 
 ## 2. Create Social Media Accounts
 
 In 2022, there are more than 4 billion people on social media, [according to Statista](https://www.statista.com/statistics/278414/number-of-worldwide-social-network-users/), 
 
-Most people have smartphones nowadays, spending most of their time on Facebook, Instagram, Reddit, and more.
-
 If you're against using social media, shift how you view these platforms.
 
-Ask yourself. How is there any value participating in social media? 
+Most people have smartphones nowadays, spending most of their time on Facebook, Instagram, Reddit, and more.
 
-Of course there is. __*FREE TRAFFIC.*__ Well, free of money, not time.
+So... is there any value participating in social media? 
 
-*"Well, I don't have time to manage and create content to attract people."*
+__*TRAFFIC.*__
 
-And that's okay. As long as our social media accounts have our logo, name, address, phone, and website link, we're fine.
+*"Well, I don't have time to manage and create content to drive traffic."*
+
+And that's okay. As long as your social media accounts have your logo, name, address, phone, and website link, we're fine.
 
 Here are some platforms you can set up an account:
 ```
@@ -50,17 +50,17 @@ YouTube
 ```
 <br>  
 
-Once you've created these accounts, be sure to add them your website's header or footer just like how I did for this website.
+Once you've created these accounts, be sure to add them your website's header or footer.
 
 ## 3. Set a Google My Business profile
 
-The easiest thing we can do right now is to set up a profile with Google My Business, or GMB for short. 
+The easiest thing we can do right now is to set up a Google My Business profile, or GMB for short. 
 
-We're explicitly telling Google, **"Hey! My business exists!"**, and it'll begin recommending our business to their ***Maps and Search*** platform.
+We're telling Google, **"My business exists!"**, and it'll introduce your business to their ***Maps and Search*** results.
 
-Literally free traffic! We know everyone is using Google to find solutions, and our local business is one of these solutions.
+And it's free! We all know everyone is using Google for answers, and your local business could be it.
 
-Here's what we'll need to add for our profile:
+Here's what we'll need to add for your profile:
 
 ```
 Name
@@ -69,20 +69,20 @@ Phone Number
 Primary and Secondary categories
 Website
 Business Hours
-Add our products or services
+Add your products or services
 High quality photos
 ```
 <br>  
 
-Once we've set everything up, Google will send a postcard with a verification code to our business address.
+Once everything is set up, you'll receive a postcard to your business address. It contains a code for verification.
 
-After verification, our profile should be live. From here on out, I highly recommend that we reach out to our clients and ask for reviews for our GMB profile. The more reviews, the higher Google will recommend our business in the search results.
+After verifying, your profile should be live. I highly recommend you reach out to your clients and ask for reviews. The more reviews, the higher you are in the search results.
 
-You can share a review form found on our dashboard, and our clients can write a review directly.
+Your clients can write a review directly or through a review link found on your dashboard.
 
 ![Google Review Form](/images/google-review-form.png "Google Review Form")
 
-You should also post updates on our profile. Things worth sharing on our profile are:
+You should also post updates on your profile. Things worth sharing are:
 
 ```
 What's New? New services, new products, new policies...
@@ -93,13 +93,13 @@ Anything you can think of, the more the better!
 ```
 <br>  
 
-## 4. Add Business to Local Directories
+## 4. Add Your Business to Local Directories
 
-Also known as local citations, this allows Google to further validate the business address as our local location.
+Also known as local citations, this will further validate your business address as your local location.
 
 It's crucial that we keep our NAP, or **_Name, Address, Phone_**, consistent.
 
-Here are a few local directories you can add our business to:
+Here are some local directories you can add your business to:
 
 ```
 yelp.com
@@ -116,33 +116,29 @@ ezlocal.com
 ```
 <br>  
 
-The more local citations, the better.
+Again, the more, the better.
 
-Be sure to add your social media profile on your GMB profile as well.
+Be sure to add your social media profiles onto your GMB profile as well.
 
-If this kind of work is too tedious and you don't have the time, [my team and I can help](/contact).
+If this work is tedious and you don't have the time, [let me know and I can help](/contact).
 
-## 5. Build Backlinks
+## 5. Building Backlinks
 
-What are backlinks? 
+Backlinks are mentions to your website. In the last step, we added our business information including our website link to Yelp's local directory, Yelp is backlinking (mentioning) to your website. Same reasons why we added our website link to our social media accounts.
 
-Backlinks are mentions to our website. In the last step, we added our business information including our website link to Yelp's local directory, Yelp is backlinking (mentioning) to our website. Same reasons why we added our website link to our social media accounts.
+Backlinks are also graded. Let's say [cnn.com](https://cnn.com) decided to run a story where your local business with your website is mentioned. That is a very strong backlink because CNN is a big, big authority in the news world.
 
-In the next paragraph, you can see that cnn.com is highlighted orange. I am backlinking CNN in this article.
-
-All backlinks are graded differently. Let's say [cnn.com](https://cnn.com) decided to run a story where our local business with our website is mentioned. That is a very strong backlink because CNN is a big, big authority in the news world.
-
-Google will crawl the CNN article, find our website link, and that'll boost us up in the search rankings.
+Once Google crawls the CNN article and finds your website link, that'll boost your website up in the search rankings.
 
 In contrast, getting a backlink from some random website won't do much.
 
-Have an established website already? You can check your backlinks with [Ahrefs' backlink checker](https://ahrefs.com/backlink-checker).
+Want to see your backlinks? You can check with [Ahrefs' backlink checker](https://ahrefs.com/backlink-checker).
 
-## Takes Times But It Works
+## Does Take Time But It Works
 
-These are the very steps I take for all of my clients. Follow this exact steps and expect more clicks and sales.
+These are the exact steps I take for my business. Follow this exact steps and expect more clicks and sales, but don't expect it to happen overnight. Search engine optimization takes time, but it's worth it.
 
-Too busy? [Contact me](/contact). My team and I can help you build a digital presence. 
+Too busy? [Talk to me](/contact). My team and I can help you build a digital presence. 
 
 Thank you for reading and good luck.
 
