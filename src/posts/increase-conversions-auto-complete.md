@@ -6,17 +6,17 @@ date: 2022-09-21
 description: I used this one plugin for my local business clients and increased conversions! Powerful and super easy to set up. 
 ---
 
-Wordpress is a powerful CMS platform. I used it for years for my clients. Along the way, I've bookmarked some plugins that increased results for me and my clients. They're simple, powerful, and perfect for your toolkit. Here's one of them:
+I've used WordPress for years for my clients. Along the years, I've bookmarked plugins that increased results for me and my clients. They're simple, powerful, and perfect for your toolkit. Here's one of them:
 
 ## Autocompleting Addresses on Forms
 
 [Autocomplete Google Address](https://wordpress.org/plugins/autocomplete-google-address/) is a plugin that auto-completes your user's address input. My clients are mostly local businesses that require a property address to begin their sales process.
 
-As a web developer, our responsibiliy is to increase leads and conversions. To do so, the user experience must be easy enough to navigate and interact. 
+As web developers, our responsibility is to increase leads and conversions. To do so, the user experience must be easy enough to view, navigate, and interact. 
 
-We want to reduce the friction between the user and the conversion process. Adding an autocomplete feature allows our users to fill out  forms with less effort. 
+By adding an autocomplete feature, it reduces the friction between the user and the conversion process, allowing them fill out our forms with less effort. 
 
-In addition, it allows the submitted data to be more uniform and cleaner.
+In addition, the submitted data is uniform and clean.
 
 ```
 3454 sunset cir Florida ❌
@@ -25,7 +25,7 @@ In addition, it allows the submitted data to be more uniform and cleaner.
 ```
 <br>  
 
-Without this plugin, users would have to type out their full information. Not to mention if the state and postal code are not included, we'll need to follow up to clarify or clean the data, costing more time.
+With this plugin, we can ensure that state and postal code is included. Without it, we'll need to follow up to clarify or clean the data, costing time.
 
 Adding autocomplete benefits both parties, website and visitors, by reducing friction on both ends.
 
@@ -57,11 +57,11 @@ If you lost your API key, it's located under Credentials -> API keys -> "Show Ke
 
 ![Where to find the API key if you lost it](/assets/images/increase-conversions-auto-complete/show-api-key.png "Where to find the API key if you lost it")
 
-I'm using [Elementor](https://be.elementor.com/visit/?bta=13962&brand=elementor) as my Wordpress page builder. You can use any page or form builder. This plugin works with any form that has an 'id' attribute.
+I'm using [Elementor](https://be.elementor.com/visit/?bta=13962&brand=elementor) as my WordPress page builder. Any page or form builder will work as long as the form has an 'id' attribute.
 
-Head over to your Wordpress website and find the form you'd like to have auto-complete enabled.
+Head over to your WordPress website and find a form you'd like to have auto-complete enabled.
 
-Right click the input field and select "Inspect". ***(Skip this step if you know your form ID)*** 
+Right-click the input field and select "Inspect". ***(Skip this step if you know your form ID)*** 
 
 ![Inspect the form's code to find the form ID](/assets/images/increase-conversions-auto-complete/inspect-form.png "Inspect the form's code to find the form ID")
 
@@ -71,11 +71,11 @@ Now that we have our form ID. Let's set up the plugin.
 
 ## Install and Setup for Autocomplete Google Address
 
-Download [Autocomplete Google Address](https://downloads.wordpress.org/plugin/autocomplete-google-address.zip) and head to your Wordpress dashboard.
+Download [Autocomplete Google Address](https://downloads.wordpress.org/plugin/autocomplete-google-address.zip) and head to your WordPress dashboard.
 
 On your left navigation, go to Plugins -> Add New.
 
-![Go to your Wordpress dashboard](/assets/images/increase-conversions-auto-complete/wordpress-plugin.png "Go to your Wordpress dashboard")
+![Go to your WordPress dashboard](/assets/images/increase-conversions-auto-complete/wordpress-plugin.png "Go to your Wordpress dashboard")
 
 Hit "Upload Plugin", choose the .zip file, and click Install.
 
@@ -83,7 +83,7 @@ Hit "Upload Plugin", choose the .zip file, and click Install.
 
 After you've activated the plugin, see your navigation bar again, and find "Autocomplete".
 
-![Find "Autocomplete" at Wordpress navigation](/assets/images/increase-conversions-auto-complete/finding-autocomplete.png "Find 'Autocomplete' at Wordpress navigation")
+![Find "Autocomplete" at WordPress navigation](/assets/images/increase-conversions-auto-complete/finding-autocomplete.png "Find 'Autocomplete' at Wordpress navigation")
 
 Add your API Key and Form ID into the fields.
 
@@ -91,8 +91,8 @@ Add your API Key and Form ID into the fields.
 
 Go to your form and begin typing a number.
 
-![Gif video of the final result](/assets/images/increase-conversions-auto-complete/autocomplete-result.gif "Gif video of the final result")
+![GIF video of the final result](/assets/images/increase-conversions-auto-complete/autocomplete-result.gif "GIF video of the final result")
 
-And there you go. We have successfully added autocomplete to your Wordpress form!
+We have successfully added autocomplete to your WordPress form!
 
 If this helped, please share this blog! Thanks for reading.

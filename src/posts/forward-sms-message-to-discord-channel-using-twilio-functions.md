@@ -10,7 +10,7 @@ description: Receive text messages into any channel! Add value to your Discord s
 
 Start by click on this icon on your Discord app.
 ![Create Discord Server Button](/assets/images/forward-sms-message-to-discord-channel-using-twilio-functions/create-server-button.jpg "Create Discord Server Button")
-Go through the steps, name your server, and voila. You got yourself a Discord server.
+Go through the steps and name your server.
 
 Next, find a channel you would like to send messages to. Click on this icon to "Edit Channel".
 
@@ -20,7 +20,7 @@ In "Integrations", create a webhook.
 
 ![Create a Webhook Bot](/assets/images/forward-sms-message-to-discord-channel-using-twilio-functions/create-webhook-button.png "Create a Webhook Bot")
 
-Name the bot anything you like, hit save, and save the webhook URL for the later steps.
+Name the bot, hit save, and save the webhook URL for later.
 
 ![Save Webhook URL](/assets/images/forward-sms-message-to-discord-channel-using-twilio-functions/copy-webhook.jpg "Save Webhook URL")
 
@@ -28,9 +28,9 @@ Name the bot anything you like, hit save, and save the webhook URL for the later
 
 [Create an account](https://www.twilio.com/referral/hGuW9u) or sign into Twilio, and [deploy this application](https://www.twilio.com/code-exchange/sms-forwarding-multiple-numbers).
 
-Once deployed, click "Go to live application". and click the "Edit this application" button.
+Once deployed, click "Go to live application", and click the "Edit this application" button.
 
-Under Settings -> Environment Variables, add a new key named **DISCORD_WEBHOOK_URL** and paste in your webhook we saved from the last step.
+Under Settings -> Environment Variables, add a new key named **DISCORD_WEBHOOK_URL** and paste in your webhook.
 
 ![Add Discord Webhook URL as Environment Variable](/assets/images/forward-sms-message-to-discord-channel-using-twilio-functions/env-vars.jpg "Add Discord Webhook URL as Environment Variable")
 
@@ -67,13 +67,13 @@ exports.handler = async function (context, event, callback) {
 ```
 <br>  
 
-Now, click Deploy All.
+Now, click Save and then Deploy All.
 
 ![Add Code Snippet to Function](/assets/images/forward-sms-message-to-discord-channel-using-twilio-functions/replace-code-after.png "Add Code Snippet to Function")
 
 ## Step 3: Deploy and Test
 
-Test it by sending a text message to your Twilio phone number and you should receive the text in your Discord channel.
+Try sending a text message to your Twilio phone number and you should receive the text in your Discord channel.
 
 And there you go, you have successfully forwarded SMS messages to a Discord channel!
 
