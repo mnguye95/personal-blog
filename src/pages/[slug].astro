@@ -23,10 +23,10 @@ let structedData = {
       "@type": "NewsArticle",
       "headline": `${frontmatter.title}`,
       "image": [
-        "/assets/"
+        "/assets/images/default.png"
        ],
-      "datePublished": "2015-02-05T08:00:00+08:00",
-      "dateModified": "2015-02-05T09:20:00+08:00",
+      "datePublished": `${new Date(frontmatter.date).toISOString().slice(0,-5)+"Z"}`,
+      "dateModified": `${new Date(frontmatter.date).toISOString().slice(0,-5)+"Z"}`,
       "author": [{
           "@type": "Person",
           "name": "Michael Nguyen",
@@ -38,7 +38,8 @@ let structedData = {
 <Layout 
     title={frontmatter.title} 
     desc={frontmatter.description} 
-    url={Astro.url.toString()}>
+    url={Astro.url.toString()}
+    schema={structedData}>
 
 	<main class="max-w-[900px] md:mx-auto m-0 mt-5">
 		<h1 class="md:text-4xl text-4xl text-honey-yellow text-center mb-5">{frontmatter.title}</h1>
