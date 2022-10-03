@@ -4,6 +4,7 @@ import "@fontsource/space-grotesk";
 import "@fontsource/montserrat"
 import "@fontsource/bungee"
 import "@fontsource/germania-one"
+import { Schema } from "astro-seo-schema"
 
 
 export interface Props {
@@ -65,9 +66,9 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <script src="https://www.google.com/recaptcha/api.js"></script>
-    <script type="application/ld+json">
-      {schema}
-    </script>
+    {schema && <Schema
+      item={schema}
+  />}
   </head>
   <body>
     <div class="flex flex-col min-h-screen max-w-[1240px] mx-auto md:p-10 p-5">
