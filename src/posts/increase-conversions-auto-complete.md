@@ -1,6 +1,6 @@
 ---
 title: "Increase Local Conversions With This Wordpress Plugin"
-slug: increase-local-conversions-with-this-wordoress-plugin
+slug: increase-local-conversions-with-this-wordpress-plugin
 excerpt: I added this Wordpress plugin to my client's website and increased conversions by 30%.
 date: 2022-09-21
 description: I used this one plugin for my local business clients and increased conversions! Powerful and super easy to set up. 
