@@ -97,7 +97,7 @@ We'll store input values, and add them a POST request to our serverless function
 Let's install nanostores.
 
 ```
-npm install nanostores
+npm i nanostores @nanostores/react
 ```
 <br>  
 
