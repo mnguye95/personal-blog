@@ -2,21 +2,53 @@
 import { Image } from '@astrojs/image/components';
 ---
 
-<div class="flex justify-between items-center w-full flex-col-reverse md:flex-row mb-10">
+<div class="flex justify-between items-center w-full flex-col md:flex-row mb-10">
     <div class="w-1/2 text-center">
-      <p class="md:text-4xl text-xl text-honeydew font-space-grotesk mb-2">Open to Work</p>
-      <ul class="max-w-xs mx-auto">
-          <li class="md:text-2xl text-xl p-1 font-space-grotesk text-space-cadet bg-light-cyan duration-75 hover:scale-[105%] cursor-default shadow-rb border-b border-r border-space-cadet mb-4">Web Applications</li>
-          <li class="md:text-2xl text-xl p-1 font-space-grotesk text-space-cadet bg-light-cyan duration-75 hover:scale-[105%] cursor-default shadow-rb border-b border-r border-space-cadet mb-4">Branding</li>
-          <li class="md:text-2xl text-xl p-1 font-space-grotesk text-space-cadet bg-light-cyan duration-75 hover:scale-[105%] cursor-default shadow-rb border-b border-r border-space-cadet mb-4">E-Commerce</li>
-          <li class="md:text-2xl text-xl p-1 font-space-grotesk text-space-cadet bg-light-cyan duration-75 hover:scale-[105%] cursor-default shadow-rb border-b border-r border-space-cadet mb-4">Wordpress</li>
+      <h1 class="md:text-2xl text-xl text-honeydew font-space-grotesk mb-2">Michael Nguyen</h1>
+      <!-- <ul class="max-w-xs mx-auto">
+          <li class="md:text-2xl text-xl p-1 font-space-grotesk text-space-cadet bg-light-cyan duration-75 hover:scale-[105%] cursor-default shadow-rb border-b border-r border-space-cadet mb-4">Software-as-a-service</li>
+          <li class="md:text-2xl text-xl p-1 font-space-grotesk text-space-cadet bg-light-cyan duration-75 hover:scale-[105%] cursor-default shadow-rb border-b border-r border-space-cadet mb-4">Websites</li>
+          <li class="md:text-2xl text-xl p-1 font-space-grotesk text-space-cadet bg-light-cyan duration-75 hover:scale-[105%] cursor-default shadow-rb border-b border-r border-space-cadet mb-4">Marketing</li>
           <li class="md:text-2xl text-xl p-1 font-space-grotesk text-space-cadet bg-light-cyan duration-75 hover:scale-[105%] cursor-default shadow-rb border-b border-r border-space-cadet mb-4">SEO</li>
-      </ul>
-      <button class="p-2 px-4 font-space-grotesk rounded-sm border-space-cadet bg-pine-green text-honeydew mb-2 duration-150 hover:scale-[108%]"><a href='/contact'>Hire me!</a></button>
+      </ul> -->
+      <Image width="400" height="400" alt="Portrait of Michael Nguyen" class="md:w-2/3 mx-auto border-2 border-honey-yellow rounded-full my-6" src="/assets/images/homepage/me.png" />
+      <button class="p-2 px-4 font-space-grotesk rounded-sm border-space-cadet bg-pine-green text-honeydew mb-2 duration-150 hover:scale-[108%]"><a href='/contact'>For Hire!</a></button>
     </div>
-    <div class="w-1/2 text-center">
-      <Image width="460" height="460" alt="Portrait of Michael Nguyen" class="md:w-2/3 w-full mx-auto border-2 border-honey-yellow rounded-full my-6" src="/assets/images/homepage/me.jpeg" />
-      <p class="md:text-xl text-lg text-honeydew font-space-grotesk mb-2">Front End Engineer</p>
+    <div class="">
+      <div class="flex flex-col md:max-w-[900px] mx-auto my-14">
+        <!-- <h2 class="mb-5 md:text-4xl text-3xl font-space-grotesk text-honey-yellow text-center font-bold">Work History</h2> -->
+        <ol class="relative border-l border-honey-yellow dark:border-honey-yellow">
+            <li class="mb-10 ml-4">
+                <div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-honey-yellow bg-honey-yellow"></div>
+                <time class="mb-1 text-sm font-normal leading-none text-honey-yellow">February 2019 - Present</time>
+                
+                <h3 class="text-lg font-semibold text-white">SEO Consultant - Clear Bounce SEO</h3>
+                <p class="mb-4 text-base font-normal text-light-cyan">∙ A digital agency that help brands develop an online presense.<br/>∙ React, NextJS, CMS, SEO, Wordpress.</p>
+            </li>
+            <!-- <li class="mb-10 ml-4">
+                <div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-honey-yellow bg-honey-yellow"></div>
+                <time class="mb-1 text-sm font-normal leading-none text-honey-yellow">October 2021 - March 2022</time>
+                <h3 class="text-lg font-semibold text-white">Quality Assurance Technician - Apple</h3>
+                <p class="mb-4 text-base font-normal text-light-cyan">Supported iPhone and AirPods hardware engineering teams by identifying component issues during product launches.</p>
+            </li> -->
+            <li class="mb-10 ml-4">
+                <div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-honey-yellow bg-honey-yellow"></div>
+                <time class="mb-1 text-sm font-normal leading-none text-honey-yellow">December 2018 - July 2019</time>
+                <h3 class="text-lg font-semibold text-white">Software Engineer - View, Inc</h3>
+                <p class="text-base font-normal text-light-cyan">∙ Developed admin dashboards for data visualization applications.</p>
+                <p class="text-base font-normal text-light-cyan">∙ SCRUM-based environment, JavaScript, ReactJS.</p>
+            </li>
+            <li class="ml-4">
+                <div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-honey-yellow bg-honey-yellow"></div>
+                <time class="mb-1 text-sm font-normal leading-none text-honey-yellow">August 2016 - June 2018</time>
+                <h3 class="text-lg font-semibold text-white">Student - University of California, Santa Cruz</h3>
+                <p class="text-base font-normal text-light-cyan">∙ BSc. Honors in Computer Science.</p>
+                <p class="text-base font-normal text-light-cyan">∙ Websites & Web Applications</p>
+            </li>
+        </ol>
+    </div>
+      <!-- <Image width="460" height="460" alt="Portrait of Michael Nguyen" class="md:w-2/3 w-full mx-auto border-2 border-honey-yellow rounded-full my-6" src="/assets/images/homepage/me.jpeg" />
+      <p class="md:text-xl text-lg text-honeydew font-space-grotesk mb-2">Front End Engineer</p> -->
       <!-- <button class="p-2 px-4 font-space-grotesk rounded-sm border-space-cadet bg-pine-green text-honeydew mb-2 duration-150 hover:scale-[108%]">Hire Me!</button> -->
     </div>
   </div>
